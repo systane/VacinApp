@@ -1,4 +1,4 @@
-/server/a/a.txt
+server/.idea/
 /client/dist
 /client/tmp
 /client/app/**/*.js
