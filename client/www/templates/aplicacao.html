@@ -1,0 +1,44 @@
+﻿<ion-view view-title="Aplicação">
+  <ion-content class="Aplicação">
+
+  	<div class="conteudo_aplicação">
+
+
+	 <div class="card">
+	  <div class="item item-divider" id="cabecalho_cadastrar_aplicacao">
+	    <h2>Adicionar nova vacina {{nomeVac}}</h2>
+	  </div>
+	  <div class="item item-text-wrap">
+	  	<label class="item item-input" id="label_sem_padding">
+		    <div class="input-label" id="div_esquerda">
+		      Tipo Vacina
+		    </div>
+		    <select class="select_direita" ng-model = "aplicacao.tipo_vacina">
+		      <option selected>Dose comum</option>
+		      <option>Reforço</option>
+		    </select>
+		</label>
+		<label class="item item-input" id="label_sem_padding">
+		    <div class="input-label" id="div_esquerda">
+		      Número da dose
+		    </div>
+		    <select class="select_direita" ng-model = "aplicacao.numero_dose">
+		      <option selected>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		    </select>
+		</label>
+	  	<label class="item item-input">
+		    <input type="date" ng-model="aplicacao.data">
+		</label>
+	  </div>
+	  <div class="item item-divider">
+	    <button ng-click="cadastrarAplicacao(aplicacao)" class="button button-block button-positive">Cadastrar Vacina</button>
+	  </div>
+	</div>
+
+
+	</div>
+
+  </ion-content>
+ </ion-view>

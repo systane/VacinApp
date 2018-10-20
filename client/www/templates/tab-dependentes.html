@@ -1,0 +1,20 @@
+﻿<ion-view view-title="Carteiras de vacinação">
+  <ion-content class="chat">   
+    <ul class="list">
+      <div id="lista_dependentes">
+        <i class="button button-icon icon ion-person-add"
+          id="adicionar_dependentes"
+          ng-click="cadastrar_dependente()">
+        </i>
+        <h2 class = "dependentes">Dependentes</h2>
+      </div>
+      <li class="item" ng-repeat="dep in dependentes" id="item_lista_dependentes">
+        <div ng-click = "enviaCartao(dep.numero_cartao_sus)">  
+          <h2 class = "nome_dependente">{{dep.nome_propriet}}</h2>
+          <p class = "cartao_dependente">{{dep.numero_cartao_sus}}</p>
+        </div>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,348 @@
+﻿.bar-stable.bar.bar-header{/*Deixa o header transparente*/
+	opacity:0.7;
+	background-color: white;
+	font-weight: bold;
+}
+
+/*==================================      TELA DE LOGIN      =====================================*/
+
+.conteudo{/*centraliza a div conteúdo no centro da tela*/
+	display: flex; /*define um conteúdo flexivel, que pode ser inline ou em block*/
+	flex-direction: column; /*define o eixo principal, estabelecendo assim como os filhos dessa div serão inseridos nesse conteúdo flexivel*/
+	justify-content: center; /*define o alinhamento da div no eixo principal*/
+  	height: 100%;
+	text-align: center; /*Centraliza todo conteúdo escrito da div*/
+}
+
+.login{/*carrega a imagem de modo responsivo*/
+	background-image: url('../img/ze_gotinha.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+#card{/*Aplica transparencia no card*/
+	padding-right: 15px;
+	padding-left: 15px;
+	opacity: 0.7;
+	background-color: black;
+}
+
+#item-divider{/*personaliza o tamanho do header do card*/
+	background-color: black;
+	margin-top: 5px;
+}
+
+#item-text-wrap{/*personaliza os itens do card*/
+	background: rgba(0, 0, 0, 0.5);
+	border: none;
+	padding-top: 0;
+	padding-bottom: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.cabecalho{
+	padding-bottom: 5px;
+	color:#fff;
+	font-weight: bold;
+}
+
+.senha,
+.usuario{
+	margin-bottom: 10px;
+	/*background: rgba(194, 184, 166, 0.8);*/
+	width: 100%;
+	font-weight: bold;
+}
+
+#botaoLogin{	
+	border: 2px solid white;	
+	margin-bottom: 14px;
+	margin-top: 2px;
+	background-color: black;
+	font-weight: bold;
+}
+
+#cadastrarUsuario{/*Personaliza o botão Cadastrar-se*/
+	color: rgb(0,75,125);
+	font-weight: bold;
+}
+
+.spanCadastrar{/*Personaiza o span Cadastrar-se*/
+	color: rgb(0,75,125);
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*=============================================== TELA DE CADASTRO =========================================*/
+
+
+.cadastrar{
+	/*background-image: url('../img/ze_gotinha.png');*/
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+
+/*=============================================== CALENDÁRIO - CAMPANHAS ================================================*/
+
+.tabela_campanha{
+	border: 3px solid white;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	color: white;
+	table-layout: fixed; /*Seta a largura da tabela em função da largura das colunas e não em função do tamanho do conteúdo das celulas */
+	text-transform: uppercase;
+}
+
+.responsive{
+	overflow-x:auto;
+	overflow-y: auto;
+	height: 100%;
+	width: 100%;
+}
+
+tr.adolescente td, tr.adulto td, tr.idoso td, tr.gestante td,
+tr.criança td{
+	border: 1px solid white;
+	vertical-align: middle;
+}
+
+th.cabeçalho_campanha{
+	vertical-align: middle;
+	border: 1px solid white;
+	font-weight: bold;
+	background-color: rgb(227, 0, 0);
+	color: #fff;
+	border-color: #fff;
+	width: 100px;
+	text-transform: uppercase;
+	text-decoration: underline;
+	border: 3px solid white;
+}
+
+tr.criança td.borda_lateral{
+	border-right: 1px solid white;
+	border-left: 0px;
+	border-bottom: 0px;
+}
+
+tr.criança td.borda_abaixo{
+	border-bottom: 1px solid white;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+}
+
+tr.criança td.sem_borda{
+	border: 0px;
+}
+
+.criança{
+	background-color: rgb(66, 214, 163);
+}
+
+.adolescente{
+	background-color: rgb(232, 229, 53);
+	
+}
+
+.adulto{
+	background-color: rgb(122, 136, 255);	
+}
+
+.idoso{
+	/*background-color: rgb(207, 181, 125);
+	F56991 - gestante
+	*/
+	background-color: rgb(125, 122, 92);	
+}
+
+.gestante{
+	background-color: #FF6AD1;	
+}
+
+h2.titulo_campanha{
+	text-align: center;
+	text-decoration: underline;
+}
+
+/*============================================   TELA DA CARTEIRA    ==========================================*/
+
+.cabecalho_carteira{
+	border: 1px solid black;
+	margin-bottom: 20px;
+	vertical-align: middle;
+}
+
+.conteudo_cabecalho_carteira{
+	vertical-align: middle;
+	margin-bottom: 5px;
+}
+
+.titulo_cabecalho{
+	text-align: center;
+	margin-top: 15px;
+}
+
+#mostrar_detalhes{
+	float: right;
+	color: blue;
+	font-size: 25px;
+}
+.icone_vacina_tomada{
+	color: green;
+	font-size: 25px;
+}
+
+.nome_vacina_tomada{
+	color: green;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.nome_vacina_ausente{
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.data_aplicacao, .dose_aplicacao{
+	display: block;
+	text-align: center;
+	color: green;
+	font-weight: bold;
+	font-size: 18px;
+	height: 30px;
+}
+
+.item_carteira{
+	background-color: #BFFFBA;
+	margin: 6px;
+	border: 3px solid green;
+	display: inline-block;
+	width: 150px;
+    height: 75px;
+    vertical-align: middle;
+}
+
+.informacoes_vacina{
+	vertical-align: middle;
+}
+
+.icone_vacina_atrasada{
+}
+
+.icone_vacina_ausente{
+	color: red;
+	font-size: 20px;
+}
+
+#mostrar_detalhes:active{
+	color: #78A0FF;
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+  padding-left: 0px;
+}
+
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+.linha_carteira{
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	vertical-align: middle;
+}
+
+.adicionar_vacina{
+	border: 3px dashed green;
+	margin: 6px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 150px;
+    height: 75px;
+    background: #D4FFD1;
+    background-clip: content-box;
+
+}
+
+.adicionar_vacina:active{
+    background: #BFFFBA;
+}
+
+.adicionar_vac{
+	display: block;
+	text-align: center;
+	color: green;
+	font-weight: bold;
+	font-size: 18px;
+	height: 30px;
+}
+
+/*=========================================== TELA APLICAÇÃO ===========================================*/
+
+#label_sem_padding{
+	padding-left: 0px;
+}
+
+#div_esquerda{
+	text-align: left;
+	padding-left: 15px;
+}
+
+.select_direita{
+	float: right;
+}
+
+/*=========================================== DEPENDENTES =========================================== */
+
+.dependentes{
+	text-align: center;
+}
+
+#item_lista_dependentes{
+	margin-right: 0px;
+	padding-right: 0px;
+	width: 100%;
+}
+
+h2.nome_dependente, .cartao_dependente{
+	font-size: 18px;
+}
+
+#adicionar_dependentes{
+	float: right;
+	margin-bottom: 5px;
+
+}
+
+ul #lista_dependentes{
+	vertical-align: middle;
+}
+
+.button.button-icon.icon.ion-person-add{
+	color: blue;
+}
+
+/* =========================================  TELA DE APLICAÇÃO ============================================= */
+
+.conteudo_aplicação{
+	display: flex; /*define um conteúdo flexivel, que pode ser inline ou em block*/
+	flex-direction: column; /*define o eixo principal, estabelecendo assim como os filhos dessa div serão inseridos nesse conteúdo flexivel*/
+	justify-content: center; /*define o alinhamento da div no eixo principal*/
+  	height: 100%;
+	text-align: center; /*Centraliza todo conteúdo escrito da div*/	
+}

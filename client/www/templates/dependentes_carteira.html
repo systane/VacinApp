@@ -1,0 +1,128 @@
+﻿
+<!--  //////////////////////////////////  TELA DE VACINAÇÃO //////////////////////////////////////// -->
+
+<ion-view view-title="VACINAS">
+  <ion-content class = "padding">
+<!--
+  <div class ="cabecalho_carteira">
+    <div class="conteudo_cabecalho_carteira">
+      <a class="button button-icon icon ion-plus-circled" id="adicionar_aplicacao"
+         ng-click="aplicacao()"></a>
+      <h2 class="titulo_cabecalho">CARTEIRA DE VACINAÇÃO</h2>
+    </div>
+  </div>
+-->
+
+  <ion-list>
+    <div ng-repeat = "infor in info">
+      <ion-item class="item-stable">
+          <i class="icon ion-android-checkmark-circle icone_vacina_tomada"></i>
+            <span class="nome_vacina_tomada" ng-cloak>{{infor.nomeVacina}}</span>
+          <i class="icon ion-chevron-down" id="mostrar_detalhes"
+             ng-click="pressionado(infor.nomeVacina)" ng-cloak></i>
+      </ion-item>
+
+      <ion-item class="item-accordion" ng-show="aux == infor.nomeVacina" ng-cloak>
+        <div class="linha_carteira" ng-cloak>
+          <div class = "item_carteira" ng-repeat="vac in infor.vacinas" ng-cloak>
+            <div class="informacoes_vacina"
+                 on-hold="editar(infor.nomeVacina, vac.NUMERO_DOSE, vac.TIPO_DOSE, vac.DATA_APLICACAO)" ng-cloak>
+              <span class = "dose_aplicacao"ng-cloak>{{vac.NUMERO_DOSE}} {{vac.TIPO_DOSE}}</span>
+              <span class="data_aplicacao"ng-cloak>{{vac.DATA_APLICACAO}}</span>
+            </div>
+          </div>
+
+          <div class="adicionar_vacina" 
+               ng-click="aplicacao(infor.nomeVacina)" ng-cloak>
+            <span class="adicionar_vac" ng-cloak>Adicionar</span>
+            <span class="adicionar_vac" ng-cloak>Nova Vacina</span>       
+          </div>
+        </div>
+      </ion-item>
+    </div>
+
+      <ion-item class="item-stable" ng-repeat = "vacinaAusente in vacinasAusentes" ng-cloak>
+        <i class="ion-close icone_vacina_ausente" ng-cloak></i>
+        <span class="nome_vacina_ausente" ng-cloak>{{vacinaAusente}}</span>
+        <i class="ion-chevron-right" id="mostrar_detalhes" ng-click="aplicacao(vacinaAusente)" ng-cloak></i>
+      </ion-item>
+    
+    <!--<ion-item class="item-accordion">
+       MOSTRA AS INFORMAÇÕES DA VACINA
+    </ion-item> -->
+
+  </ion-list>
+
+  </ion-content>
+</ion-view>
+
+
+
+  <!--
+    <ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable" ng-click="toggleGroup(group)"
+          ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+              &nbsp;
+              Group {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
+            {{item}}
+          </ion-item>
+        </div>
+      </ion-list>
+  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+    <div class="conteudo_carteira_vacinacao">
+      
+      <ul class="list">
+        <div class ="cabecalho_carteira">
+          <div class="conteudo_cabecalho_carteira">
+            <a class="button button-icon icon ion-plus-circled" id="adicionar_aplicacao" ng-click="aplicacao()"></a>
+            <h2 class="titulo_cabecalho">CARTEIRA DE VACINAÇÃO</h2>
+          </div>
+        </div>
+        
+        <li class="item" ng-repeat="vac in Jsonvacina | unique:'NOME_VACINA'">
+          <span class="nome_vacina">{{vac.NOME_VACINA}}</span>
+            <div class = "item_carteira" ng-show="vac.NOME_VACINA == 'BGC'" ng-repeat="v in vacinas[0]">
+              <div class="informacoes_vacina">
+                <span class = "data_aplicacao">{{v.DATA_APLICACAO}}</span>
+                <span class="lote_aplicacao">{{v.NUMERO_DOSE}} {{v.TIPO_DOSE}}</span>
+              </div>
+            </div>
+
+            <div class = "item_carteira" ng-show="vac.NOME_VACINA == 'Hepatite A'" ng-repeat="v in vacinas[1]">
+              <div class="informacoes_vacina">
+                <span class = "data_aplicacao">{{v.DATA_APLICACAO}}</span>
+                <span class="lote_aplicacao">{{v.NUMERO_DOSE}} {{v.TIPO_DOSE}}</span>
+              </div>
+            </div>
+
+            <div class = "item_carteira" ng-show="vac.NOME_VACINA == 'PENTA'" ng-repeat="v in vacinas[3]">
+              <div class="informacoes_vacina">
+                <span class = "data_aplicacao">{{v.DATA_APLICACAO}}</span>
+                <span class="lote_aplicacao">{{v.NUMERO_DOSE}} {{v.TIPO_DOSE}}</span>
+              </div>
+            </div>
+
+        </li>
+      </ul>
+    </div>
+    -->

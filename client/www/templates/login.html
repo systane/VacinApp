@@ -1,0 +1,18 @@
+﻿<ion-view view-title="Vacina" class = "login">
+  <ion-content>
+    <div class="conteudo">
+      <div class="card" id="card">
+        <div class="item item-divider"  id="item-divider">
+          <h2 class="cabecalho">Login</h2>
+        </div>
+        <div class="item item-text-wrap" id="item-text-wrap">
+          <input type="text" placeholder="Usuário" class="usuario" ng-model='login.usuario.login'>
+          <input type="password" placeholder="Senha" class="senha"
+                 ng-model='login.usuario.senha' ng-model-options="{ debounce: 250 }">
+        </div>
+        <button  ng-click = "login.logar()" class="button button-block button-positive" id="botaoLogin">Login</button>
+      </div>
+      <button ng-click = "login.cadastrar()" class = "button button-clear button-dark" id="cadastrarUsuario">Não possui uma conta? <span class="spanCadastrar">Cadastre-se</span> </button>
+    </div>
+  </ion-content>
+</ion-view>
