@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UsuarioDTO {
+public class UserDTO {
 
     private String login;
     private String senha;
@@ -24,7 +24,7 @@ public class UsuarioDTO {
     }
 
     public static class ToEntity{
-        public Usuario apply(UsuarioDTO dto){
+        public Usuario apply(UserDTO dto){
             Usuario entity = new Usuario();
 
             if(dto != null) {
@@ -42,8 +42,8 @@ public class UsuarioDTO {
     }
 
     public static class ToDTO{
-        public UsuarioDTO apply(Usuario entity){
-            UsuarioDTO dto = new UsuarioDTO();
+        public UserDTO apply(Usuario entity){
+            UserDTO dto = new UserDTO();
 
             dto.setLogin(entity.getLogin());
             dto.setSenha(entity.getSenha());

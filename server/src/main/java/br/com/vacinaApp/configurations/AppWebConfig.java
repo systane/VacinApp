@@ -25,8 +25,8 @@ public class AppWebConfig extends WebMvcConfigurerAdapter{
         return new WebMvcConfigurerAdapter() {
             @Override public void addCorsMappings(CorsRegistry corsRegistry) {
                 corsRegistry.addMapping("/**")
-                        .allowedOrigins("http://localhost:8100")
-                        .allowedMethods("GET", "POST", "DELETE", "PUT")
+                        .allowedOrigins("*")
+                        .allowedMethods("GET", "POST", "DELETE", "PUT", "OPTIONS", "HEAD")
                         .allowCredentials(true);
             }
         };

@@ -15,7 +15,7 @@ function loginService($http, $resource) {
     function cadastrarUsuario(dadosUsuario) {
         return $http({
             method: 'POST',
-            url: 'http://localhost:8085/novoUsuario',
+            url: 'http://localhost:8085/owner/newUser',
             headers:{'Content-Type': 'application/json'},
             data: dadosUsuario
         })

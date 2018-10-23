@@ -6,17 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.Calendar;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class DependenteDTO extends UsuarioDTO {
+public class OwnerDTO extends UserDTO {
     private String nome;
-    private int numero_cart_sus;
+    private int numero_cartao_sus;
     private LocalDateTime data_nascimento;
     private String sexo;
-    private String usuario;
-    private String senha;
 }
