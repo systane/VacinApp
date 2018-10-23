@@ -26,7 +26,8 @@ function loginController($state, loginService) {
       else{
         console.log(response);
       }
-  });
+    });
+  }
 
 
 

@@ -1,0 +1,6 @@
+
+client/\.vscode/
+
+server/\.idea/
+
+server/target/

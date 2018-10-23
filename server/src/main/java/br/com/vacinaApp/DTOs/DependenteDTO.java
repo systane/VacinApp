@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.Calendar;
 
 @Setter
@@ -14,6 +15,8 @@ import java.util.Calendar;
 public class DependenteDTO extends UsuarioDTO {
     private String nome;
     private int numero_cart_sus;
-    private Calendar data_nascimento;
+    private LocalDateTime data_nascimento;
     private String sexo;
+    private String usuario;
+    private String senha;
 }

@@ -18,7 +18,7 @@ function cadastrarUsuarioController($state, loginService, toaster, $ionicLoading
       if(response.status == 201)
         $state.go('login');
       else{
-        // console.log(response);
+        console.log(response);
         // toaster.pop('warning', 'Serviço indisponível no momento', 'Enquanto isso revise se seus dados estão corretos')
         // toaster.pop('info', "title", "text");
         // $ionicLoading.show({ template: 'Item Added!', noBackdrop: true, duration: 2000 });

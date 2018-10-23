@@ -1,24 +1,17 @@
 package br.com.vacinaApp.entities.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum TipoDoseEnum {
 
-    DOSE("D", "Dose"), REFORCO("R", "Reforço");
+    DOSE("D", "TipoAplicacao"), REFORCO("R", "Reforço");
 
     private String id;
     private String descricao;
 
-    TipoDoseEnum(String id, String descricao) {
-        this.id = id;
-        this.descricao = descricao;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
 
     public static TipoDoseEnum from(final String valor){
         if(valor == null){
@@ -39,7 +32,4 @@ public enum TipoDoseEnum {
         throw new IllegalArgumentException(msg.toString());
     }
 
-//    public static TipoDoseEnum fromId(final String id){
-//
-//    }
 }
