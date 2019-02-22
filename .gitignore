@@ -2,5 +2,7 @@
 client/\.vscode/
 
 server/\.idea/
+_server/\.idea/
 
 server/target/
+_server/target/
