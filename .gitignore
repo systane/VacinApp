@@ -6,3 +6,5 @@ _server/\.idea/
 
 server/target/
 _server/target/
+*.iml
+*.run
