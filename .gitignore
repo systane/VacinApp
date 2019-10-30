@@ -1,11 +1,6 @@
-
 client/\.vscode/
-
 server/\.idea/
-
 server/target/
-client/node_modules/
-
-client/www/lib/
-
+client/node_modules/*
+client/www/lib/*
 *.lock
